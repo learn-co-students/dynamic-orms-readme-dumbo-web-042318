@@ -9,5 +9,11 @@ song = Song.new(name: "Hello", album: "25")
 puts "song name: " + song.name
 puts "song album: " + song.album
 song.save
+bye_bye_bye = Song.new(name: "bye bye bye", album: "nsync")
+bye_bye_bye.save
+
+Song.find_by_name("bye bye bye")
 
 DB[:conn].execute("SELECT * FROM songs")
+
+binding.pry
